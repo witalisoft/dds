@@ -30,7 +30,7 @@ Environment variables on container run:
 2. Build container image:
 `$ sudo docker build -t dds:latest -f Dockerfile .`
 3. Run container:
-`$ sudo docker run -d -h myhostname -v /var/run/docker.sock:/var/run/docker.sock -e DDS_ETCD_URL="http://172.17.0.1:4001/v2/keys/" dds:latest`
+`$ sudo docker run -d -h setyourhostname -v /var/run/docker.sock:/var/run/docker.sock -e DDS_ETCD_URL="http://172.17.0.1:4001/v2/keys/" dds:latest`
 4. Application is available under:
 `$ curl http://172.17.0.1:4001/v2/keys/?recursive=true 2>/dev/null | python -m json.tool | less`
 ```json
