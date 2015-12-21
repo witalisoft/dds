@@ -1,9 +1,9 @@
 # Distributed Docker Stats
-It's a tool that collects containers resource usage, put them into etcd, so it makes it distributed across docker hosts. 
+It's a tool that collects containers resource usage and put them into etcd, so it makes its distributed across docker hosts. 
 
 ## Detailed
-Using resource usage grabbed from docker API via docker-py python module. To speed things up you can start collecting data concurrently via multiprocessing.
-Host and containers keys set with etcd TTL.
+Using resource usage grabbed from docker API via docker-py python module. To speed things up collecting data is started concurrently via multiprocessing.
+Host and containers keys are set with etcd TTL.
 
 ## Runtime configuration
 Environment variables on container run:
@@ -53,5 +53,4 @@ Environment variables on container run:
                                 "modifiedIndex": 3520,
                                 "value": "0.0"
                             },
-...
 ```
